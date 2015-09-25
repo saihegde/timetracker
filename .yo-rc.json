@@ -1,0 +1,21 @@
+{
+  "generator-jhipster": {
+    "baseName": "timetracker",
+    "packageName": "com.pavitlabs.timetracker",
+    "packageFolder": "com/pavitlabs/timetracker",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "no",
+    "useCompass": true,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "enableTranslation": true,
+    "rememberMeKey": "81a6ef209242dce55faed090f5a735b956b92af7"
+  }
+}

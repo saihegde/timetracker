@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span translate="timetrackerApp.timesheetEntry.detail.title">TimesheetEntry</span> {{timesheetEntry.id}}</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="timetrackerApp.timesheetEntry.hours">Hours</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{timesheetEntry.hours}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="timetrackerApp.timesheetEntry.timesheet">timesheet</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{timesheetEntry.timesheetId}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="timetrackerApp.timesheetEntry.task">task</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{timesheetEntry.taskName}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="timesheetEntry"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

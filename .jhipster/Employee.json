@@ -1,0 +1,99 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "task",
+            "relationshipNameCapitalized": "Task",
+            "relationshipFieldName": "task",
+            "otherEntityName": "task",
+            "relationshipType": "many-to-many",
+            "otherEntityNameCapitalized": "Task",
+            "otherEntityField": "name",
+            "ownerSide": true
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "timesheet",
+            "relationshipNameCapitalized": "Timesheet",
+            "relationshipFieldName": "timesheet",
+            "otherEntityName": "timesheet",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "Timesheet",
+            "otherEntityRelationshipName": "employee"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "firstName",
+            "fieldType": "String",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "FirstName",
+            "fieldNameUnderscored": "first_name",
+            "fieldInJavaBeanMethod": "FirstName",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "middleName",
+            "fieldType": "String",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "MiddleName",
+            "fieldNameUnderscored": "middle_name",
+            "fieldInJavaBeanMethod": "MiddleName",
+            "fieldValidate": true,
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "lastName",
+            "fieldType": "String",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "LastName",
+            "fieldNameUnderscored": "last_name",
+            "fieldInJavaBeanMethod": "LastName",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "emailId",
+            "fieldType": "String",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "EmailId",
+            "fieldNameUnderscored": "email_id",
+            "fieldInJavaBeanMethod": "EmailId",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "phoneNumber",
+            "fieldType": "String",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "PhoneNumber",
+            "fieldNameUnderscored": "phone_number",
+            "fieldInJavaBeanMethod": "PhoneNumber",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": true,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": true,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150924231958",
+    "dto": "mapstruct",
+    "pagination": "pager",
+    "validation": true
+}

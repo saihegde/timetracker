@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span translate="timetrackerApp.project.detail.title">Project</span> {{project.id}}</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="timetrackerApp.project.name">Name</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{project.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="timetrackerApp.project.startDate">StartDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{project.startDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="timetrackerApp.project.endDate">EndDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{project.endDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="timetrackerApp.project.client">client</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{project.clientId}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="project"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

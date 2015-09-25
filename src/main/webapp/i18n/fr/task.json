@@ -1,0 +1,22 @@
+{
+    "timetrackerApp": {
+        "task" : {
+            "home": {
+                "title": "Tasks",
+                "createLabel": "Créer un nouveau Task",
+                "createOrEditLabel": "Créer ou éditer un Task"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Task {{ id }} ?"
+            },
+            "detail": {
+                "title": "Task"
+            },
+            "name": "Name",
+            "project": "project",
+            "employee": "employee",
+            "timesheetEntry": "timesheetEntry"
+        }
+    }
+}
+

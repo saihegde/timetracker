@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span translate="timetrackerApp.employee.detail.title">Employee</span> {{employee.id}}</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="timetrackerApp.employee.firstName">FirstName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{employee.firstName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="timetrackerApp.employee.middleName">MiddleName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{employee.middleName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="timetrackerApp.employee.lastName">LastName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{employee.lastName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="timetrackerApp.employee.emailId">EmailId</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{employee.emailId}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="timetrackerApp.employee.phoneNumber">PhoneNumber</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{employee.phoneNumber}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="employee"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,81 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myEmployeeLabel" translate="timetrackerApp.employee.home.createOrEditLabel">Create or edit a Employee</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label translate="global.field.id">ID</label>
+            <input type="text" class="form-control" name="id"
+                    ng-model="employee.id" readonly>
+        </div>
+
+        <div class="form-group">
+            <label translate="timetrackerApp.employee.firstName" for="field_firstName">FirstName</label>
+            <input type="text" class="form-control" name="firstName" id="field_firstName"
+                    ng-model="employee.firstName" required>
+
+            <div ng-show="editForm.firstName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.firstName.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="timetrackerApp.employee.middleName" for="field_middleName">MiddleName</label>
+            <input type="text" class="form-control" name="middleName" id="field_middleName"
+                    ng-model="employee.middleName">
+
+            <div ng-show="editForm.middleName.$invalid">
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="timetrackerApp.employee.lastName" for="field_lastName">LastName</label>
+            <input type="text" class="form-control" name="lastName" id="field_lastName"
+                    ng-model="employee.lastName" required>
+
+            <div ng-show="editForm.lastName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.lastName.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="timetrackerApp.employee.emailId" for="field_emailId">EmailId</label>
+            <input type="text" class="form-control" name="emailId" id="field_emailId"
+                    ng-model="employee.emailId" required>
+
+            <div ng-show="editForm.emailId.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.emailId.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="timetrackerApp.employee.phoneNumber" for="field_phoneNumber">PhoneNumber</label>
+            <input type="text" class="form-control" name="phoneNumber" id="field_phoneNumber"
+                    ng-model="employee.phoneNumber">
+
+        </div>
+
+        <div class="form-group">
+            <label translate="timetrackerApp.employee.task" for="field_task">task</label>
+            <select class="form-control" id="field_task" multiple name="task" ng-model="employee.tasks" ng-options="task as task.name for task in tasks track by task.id">
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

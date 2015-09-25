@@ -1,0 +1,62 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "project",
+            "relationshipNameCapitalized": "Project",
+            "relationshipFieldName": "project",
+            "otherEntityName": "project",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Project",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "employee",
+            "relationshipNameCapitalized": "Employee",
+            "relationshipFieldName": "employee",
+            "otherEntityName": "employee",
+            "relationshipType": "many-to-many",
+            "otherEntityNameCapitalized": "Employee",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "task"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "timesheetEntry",
+            "relationshipNameCapitalized": "TimesheetEntry",
+            "relationshipFieldName": "timesheetEntry",
+            "otherEntityName": "timesheetEntry",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "TimesheetEntry",
+            "otherEntityRelationshipName": "task"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Name",
+            "fieldNameUnderscored": "name",
+            "fieldInJavaBeanMethod": "Name",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": true,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150924231319",
+    "dto": "mapstruct",
+    "pagination": "pager",
+    "validation": true
+}

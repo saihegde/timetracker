@@ -1,0 +1,21 @@
+{
+    "timetrackerApp": {
+        "timesheetEntry" : {
+            "home": {
+                "title": "TimesheetEntrys",
+                "createLabel": "Créer un nouveau TimesheetEntry",
+                "createOrEditLabel": "Créer ou éditer un TimesheetEntry"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le TimesheetEntry {{ id }} ?"
+            },
+            "detail": {
+                "title": "TimesheetEntry"
+            },
+            "hours": "Hours",
+            "timesheet": "timesheet",
+            "task": "task"
+        }
+    }
+}
+

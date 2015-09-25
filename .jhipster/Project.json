@@ -1,0 +1,74 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "client",
+            "relationshipNameCapitalized": "Client",
+            "relationshipFieldName": "client",
+            "otherEntityName": "client",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Client",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "task",
+            "relationshipNameCapitalized": "Task",
+            "relationshipFieldName": "task",
+            "otherEntityName": "task",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "Task",
+            "otherEntityRelationshipName": "project"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Name",
+            "fieldNameUnderscored": "name",
+            "fieldInJavaBeanMethod": "Name",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "startDate",
+            "fieldType": "LocalDate",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "StartDate",
+            "fieldNameUnderscored": "start_date",
+            "fieldInJavaBeanMethod": "StartDate",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "endDate",
+            "fieldType": "LocalDate",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "EndDate",
+            "fieldNameUnderscored": "end_date",
+            "fieldInJavaBeanMethod": "EndDate",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": true,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150924224334",
+    "dto": "mapstruct",
+    "pagination": "pager",
+    "validation": true
+}

@@ -1,0 +1,51 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "timesheet",
+            "relationshipNameCapitalized": "Timesheet",
+            "relationshipFieldName": "timesheet",
+            "otherEntityName": "timesheet",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Timesheet",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "task",
+            "relationshipNameCapitalized": "Task",
+            "relationshipFieldName": "task",
+            "otherEntityName": "task",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Task",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "hours",
+            "fieldType": "BigDecimal",
+            "fieldIsEnum": false,
+            "fieldNameCapitalized": "Hours",
+            "fieldNameUnderscored": "hours",
+            "fieldInJavaBeanMethod": "Hours",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": true,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150924232735",
+    "dto": "mapstruct",
+    "pagination": "pager",
+    "validation": true
+}

@@ -1,0 +1,19 @@
+{
+    "timetrackerApp": {
+        "client" : {
+            "home": {
+                "title": "Clients",
+                "createLabel": "Create a new Client",
+                "createOrEditLabel": "Create or edit a Client"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Client {{ id }}?"
+            },
+            "detail": {
+                "title": "Client"
+            },
+            "name": "Name",
+            "project": "project"
+        }
+    }
+}

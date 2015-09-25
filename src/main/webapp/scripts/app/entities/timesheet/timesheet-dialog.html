@@ -1,0 +1,41 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myTimesheetLabel" translate="timetrackerApp.timesheet.home.createOrEditLabel">Create or edit a Timesheet</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label translate="global.field.id">ID</label>
+            <input type="text" class="form-control" name="id"
+                    ng-model="timesheet.id" readonly>
+        </div>
+
+        <div class="form-group">
+            <label translate="timetrackerApp.timesheet.status" for="field_status">Status</label>
+            <select class="form-control" name="status" ng-model="timesheet.status" id="field_status">
+               <option value="SAVED">SAVED</option>
+               <option value="PENDING">PENDING</option>
+               <option value="APPROVED">APPROVED</option>
+               <option value="REJECTED">REJECTED</option>
+            </select>
+
+        </div>
+
+        <div class="form-group">
+            <label translate="timetrackerApp.timesheet.employee" for="field_employee">employee</label>
+            <select class="form-control" id="field_employee" name="employee" ng-model="timesheet.employee.id" ng-options="employee.id as employee.id for employee in employees">
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

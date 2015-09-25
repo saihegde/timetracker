@@ -1,0 +1,49 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "employee",
+            "relationshipNameCapitalized": "Employee",
+            "relationshipFieldName": "employee",
+            "otherEntityName": "employee",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Employee",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "timesheetEntry",
+            "relationshipNameCapitalized": "TimesheetEntry",
+            "relationshipFieldName": "timesheetEntry",
+            "otherEntityName": "timesheetEntry",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "TimesheetEntry",
+            "otherEntityRelationshipName": "timesheet"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "status",
+            "fieldType": "TimesheetStatus",
+            "fieldIsEnum": true,
+            "fieldValues": "SAVED,PENDING,APPROVED,REJECTED",
+            "fieldNameCapitalized": "Status",
+            "fieldNameUnderscored": "status",
+            "fieldInJavaBeanMethod": "Status",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": true,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150924232614",
+    "dto": "mapstruct",
+    "pagination": "pager",
+    "validation": false
+}

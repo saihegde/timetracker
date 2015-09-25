@@ -1,0 +1,61 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myProjectLabel" translate="timetrackerApp.project.home.createOrEditLabel">Create or edit a Project</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label translate="global.field.id">ID</label>
+            <input type="text" class="form-control" name="id"
+                    ng-model="project.id" readonly>
+        </div>
+
+        <div class="form-group">
+            <label translate="timetrackerApp.project.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="project.name" required>
+
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="timetrackerApp.project.startDate" for="field_startDate">StartDate</label>
+            <input type="date" class="form-control" name="startDate" id="field_startDate"
+                    ng-model="project.startDate" required>
+
+            <div ng-show="editForm.startDate.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.startDate.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="timetrackerApp.project.endDate" for="field_endDate">EndDate</label>
+            <input type="date" class="form-control" name="endDate" id="field_endDate"
+                    ng-model="project.endDate">
+
+        </div>
+
+        <div class="form-group">
+            <label translate="timetrackerApp.project.client" for="field_client">client</label>
+            <select class="form-control" id="field_client" name="client" ng-model="project.client.id" ng-options="client.id as client.id for client in clients">
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
