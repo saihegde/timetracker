@@ -73,7 +73,7 @@
                     "invalid": "Votre email n'est pas valide."
                 }
             }
-        }, 
+        },
         "field": {
             "id" : "ID"
         }
@@ -105,5 +105,5 @@
             "datetimelocal": "Ce champs doit être une date et une heure."
         }
     },
-    "footer": "Ceci est votre pied de page"
+    "footer": "Alimenté par Willow Solutions Inc"
 }
