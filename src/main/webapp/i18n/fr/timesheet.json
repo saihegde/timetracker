@@ -4,7 +4,8 @@
             "home": {
                 "title": "Timesheets",
                 "createLabel": "Créer un nouveau Timesheet",
-                "createOrEditLabel": "Créer ou éditer un Timesheet"
+                "createOrEditLabel": "Créer ou éditer un Timesheet",
+                "uploadLabel" : "Téléchargez une feuille de temps Approuvé"
             },
             "delete": {
                 "question": "Etes-vous certain de vouloir supprimer le Timesheet {{ id }} ?"

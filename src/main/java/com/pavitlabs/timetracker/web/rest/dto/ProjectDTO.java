@@ -101,6 +101,7 @@ public class ProjectDTO implements Serializable {
                 ", name='" + name + "'" +
                 ", startDate='" + startDate + "'" +
                 ", endDate='" + endDate + "'" +
+                ", clientId='" + clientId + "'" +
                 '}';
     }
 }

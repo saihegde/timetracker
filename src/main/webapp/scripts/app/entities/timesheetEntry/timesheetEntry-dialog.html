@@ -32,12 +32,12 @@
 
         <div class="form-group">
             <label translate="timetrackerApp.timesheetEntry.timesheet" for="field_timesheet">timesheet</label>
-            <select class="form-control" id="field_timesheet" name="timesheet" ng-model="timesheetEntry.timesheet.id" ng-options="timesheet.id as timesheet.id for timesheet in timesheets">
+            <select class="form-control" id="field_timesheet" name="timesheet" ng-model="timesheetEntry.timesheetId" ng-options="timesheet.id as timesheet.id for timesheet in timesheets">
             </select>
         </div>
         <div class="form-group">
             <label translate="timetrackerApp.timesheetEntry.task" for="field_task">task</label>
-            <select class="form-control" id="field_task" name="task" ng-model="timesheetEntry.task.id" ng-options="task.id as task.name for task in tasks">
+            <select class="form-control" id="field_task" name="task" ng-model="timesheetEntry.taskId" ng-options="task.id as task.name for task in tasks">
             </select>
         </div>
     </div>
