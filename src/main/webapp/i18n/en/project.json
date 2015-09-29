@@ -13,10 +13,10 @@
                 "title": "Project"
             },
             "name": "Name",
-            "startDate": "StartDate",
-            "endDate": "EndDate",
-            "client": "client",
-            "task": "task"
+            "startDate": "Start Date",
+            "endDate": "End Date",
+            "client": "Client",
+            "task": "Task"
         }
     }
 }

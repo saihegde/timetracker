@@ -1,5 +1,11 @@
 package com.pavitlabs.timetracker.web.rest.dto;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.pavitlabs.timetracker.domain.util.CustomLocalDateSerializer;
+import com.pavitlabs.timetracker.domain.util.ISO8601LocalDateDeserializer;
+import org.joda.time.LocalDate;
+
 import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -16,6 +22,11 @@ public class TimesheetEntryDTO implements Serializable {
     private Long id;
 
     @NotNull
+    @JsonSerialize(using = CustomLocalDateSerializer.class)
+    @JsonDeserialize(using = ISO8601LocalDateDeserializer.class)
+    private LocalDate entryDate;
+
+    @NotNull
     private BigDecimal hours;
 
     private Long timesheetId;
@@ -30,6 +41,14 @@ public class TimesheetEntryDTO implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public LocalDate getEntryDate() {
+        return entryDate;
+    }
+
+    public void setEntryDate(LocalDate entryDate) {
+        this.entryDate = entryDate;
     }
 
     public BigDecimal getHours() {

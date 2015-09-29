@@ -14,8 +14,8 @@
                 "title": "Timesheet"
             },
             "status": "Status",
-            "employee": "employee",
-            "timesheetEntry": "timesheetEntry"
+            "employee": "Employee",
+            "timesheetEntry": "Timesheet Entry"
         }
     }
 }

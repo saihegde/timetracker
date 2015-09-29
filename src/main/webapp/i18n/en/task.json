@@ -13,9 +13,9 @@
                 "title": "Task"
             },
             "name": "Name",
-            "project": "project",
-            "employee": "employee",
-            "timesheetEntry": "timesheetEntry"
+            "project": "Project",
+            "employee": "Employee",
+            "timesheetEntry": "Timesheet Entry"
         }
     }
 }

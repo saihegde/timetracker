@@ -13,6 +13,7 @@
                 "title": "Timesheet Entry"
             },
             "hours": "Hours",
+            "entryDate" : "Entry Date",
             "timesheet": "Timesheet",
             "task": "Task"
         }

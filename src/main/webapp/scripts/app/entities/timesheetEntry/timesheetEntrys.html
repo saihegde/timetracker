@@ -42,18 +42,20 @@
             <thead>
                 <tr>
                     <th translate="global.field.id">ID</th>
+                    <th translate="timetrackerApp.timesheetEntry.timesheet">Timesheet</th>
+                    <th translate="timetrackerApp.timesheetEntry.entryDate">Entry Date</th>
+                    <th translate="timetrackerApp.timesheetEntry.task">Task</th>
                     <th translate="timetrackerApp.timesheetEntry.hours">Hours</th>
-                    <th translate="timetrackerApp.timesheetEntry.timesheet">timesheet</th>
-                    <th translate="timetrackerApp.timesheetEntry.task">task</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="timesheetEntry in timesheetEntrys">
                     <td><a ui-sref="timesheetEntry.detail({id:timesheetEntry.id})">{{timesheetEntry.id}}</a></td>
-                    <td>{{timesheetEntry.hours}}</td>
                     <td>{{timesheetEntry.timesheetId}}</td>
+                    <td>{{timesheetEntry.entryDate}}</td>
                     <td>{{timesheetEntry.taskName}}</td>
+                    <td>{{timesheetEntry.hours}}</td>
                     <td>
                         <button type="submit"
                                 ui-sref="timesheetEntry.detail({id:timesheetEntry.id})"

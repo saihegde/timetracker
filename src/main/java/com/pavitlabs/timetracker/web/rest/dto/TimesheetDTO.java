@@ -18,6 +18,8 @@ public class TimesheetDTO implements Serializable {
 
     private Long employeeId;
 
+    private String employeeName;
+
     public Long getId() {
         return id;
     }
@@ -40,6 +42,14 @@ public class TimesheetDTO implements Serializable {
 
     public void setEmployeeId(Long employeeId) {
         this.employeeId = employeeId;
+    }
+
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
     }
 
     @Override

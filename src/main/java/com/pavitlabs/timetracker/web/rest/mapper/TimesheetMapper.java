@@ -12,6 +12,7 @@ import org.mapstruct.*;
 public interface TimesheetMapper {
 
     @Mapping(source = "employee.id", target = "employeeId")
+    @Mapping(expression = "java(timesheet.getEmployee().getLastName() + \", \" + timesheet.getEmployee().getFirstName())" , target = "employeeName")
     TimesheetDTO timesheetToTimesheetDTO(Timesheet timesheet);
 
     @Mapping(source = "employeeId", target = "employee")

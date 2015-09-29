@@ -59,7 +59,7 @@
                 <tr ng-repeat="timesheet in timesheets">
                     <td><a ui-sref="timesheet.detail({id:timesheet.id})">{{timesheet.id}}</a></td>
                     <td>{{timesheet.status}}</td>
-                    <td>{{timesheet.employeeId}}</td>
+                    <td>{{timesheet.employeeName}}</td>
                     <td>
                         <button type="submit"
                                 ui-sref="timesheet.detail({id:timesheet.id})"

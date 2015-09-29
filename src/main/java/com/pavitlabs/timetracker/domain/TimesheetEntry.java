@@ -1,7 +1,13 @@
 package com.pavitlabs.timetracker.domain;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.pavitlabs.timetracker.domain.util.CustomLocalDateSerializer;
+import com.pavitlabs.timetracker.domain.util.ISO8601LocalDateDeserializer;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.Type;
+import org.joda.time.LocalDate;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
@@ -25,6 +31,13 @@ public class TimesheetEntry implements Serializable {
     private Long id;
 
     @NotNull
+    @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
+    @JsonSerialize(using = CustomLocalDateSerializer.class)
+    @JsonDeserialize(using = ISO8601LocalDateDeserializer.class)
+    @Column(name = "entry_date", nullable = false)
+    private LocalDate entryDate;
+
+    @NotNull
     @Column(name = "hours", precision=10, scale=2, nullable = false)
     private BigDecimal hours;
 
@@ -40,6 +53,14 @@ public class TimesheetEntry implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public LocalDate getEntryDate() {
+        return entryDate;
+    }
+
+    public void setEntryDate(LocalDate entryDate) {
+        this.entryDate = entryDate;
     }
 
     public BigDecimal getHours() {

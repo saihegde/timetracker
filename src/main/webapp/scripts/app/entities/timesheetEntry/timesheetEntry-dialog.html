@@ -12,7 +12,18 @@
             <input type="text" class="form-control" name="id"
                     ng-model="timesheetEntry.id" readonly>
         </div>
+        <div class="form-group">
+            <label translate="timetrackerApp.timesheetEntry.entryDate" for="field_entryDate">Entry Date</label>
+            <input type="date" class="form-control" name="entryDate" id="field_entryDate"
+                   ng-model="timesheetEntry.entryDate" required>
 
+            <div ng-show="editForm.entryDate.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.entryDate.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
         <div class="form-group">
             <label translate="timetrackerApp.timesheetEntry.hours" for="field_hours">Hours</label>
             <input type="number" class="form-control" name="hours" id="field_hours"

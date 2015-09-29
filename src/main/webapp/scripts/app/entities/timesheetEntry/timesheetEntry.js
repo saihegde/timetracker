@@ -60,7 +60,7 @@ angular.module('timetrackerApp')
                         size: 'lg',
                         resolve: {
                             entity: function () {
-                                return {hours: null, id: null};
+                                return {hours: null, entryDate: null, id: null};
                             }
                         }
                     }).result.then(function(result) {

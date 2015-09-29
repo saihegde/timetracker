@@ -12,13 +12,13 @@
             "detail": {
                 "title": "Employee"
             },
-            "firstName": "FirstName",
-            "middleName": "MiddleName",
-            "lastName": "LastName",
-            "emailId": "EmailId",
-            "phoneNumber": "PhoneNumber",
-            "task": "task",
-            "timesheet": "timesheet"
+            "firstName": "First Name",
+            "middleName": "Middle Name",
+            "lastName": "Last Name",
+            "emailId": "Email Id",
+            "phoneNumber": "Phone Number",
+            "task": "Task",
+            "timesheet": "Timesheet"
         }
     }
 }

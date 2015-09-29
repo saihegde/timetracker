@@ -33,6 +33,8 @@ public class ProjectDTO implements Serializable {
 
     private Long clientId;
 
+    private String clientName;
+
     public Long getId() {
         return id;
     }
@@ -71,6 +73,14 @@ public class ProjectDTO implements Serializable {
 
     public void setClientId(Long clientId) {
         this.clientId = clientId;
+    }
+
+    public String getClientName() {
+        return clientName;
+    }
+
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
     }
 
     @Override

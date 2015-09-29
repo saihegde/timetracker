@@ -12,6 +12,7 @@ import org.mapstruct.*;
 public interface ProjectMapper {
 
     @Mapping(source = "client.id", target = "clientId")
+    @Mapping(source = "client.name", target = "clientName")
     ProjectDTO projectToProjectDTO(Project project);
 
     @Mapping(source = "clientId", target = "client")
